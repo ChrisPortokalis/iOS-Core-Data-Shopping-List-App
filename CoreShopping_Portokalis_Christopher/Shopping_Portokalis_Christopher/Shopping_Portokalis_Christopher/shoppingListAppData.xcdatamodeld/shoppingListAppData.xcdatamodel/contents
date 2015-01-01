@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13F34" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ChoicesEntity" representedClassName="ChoicesEntity" syncable="YES">
+        <attribute name="choiceCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="choiceName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="choiceSection" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="choiceToItem" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ShoppingItemEntity" inverseName="itemsToChoice" inverseEntity="ShoppingItemEntity" syncable="YES"/>
+    </entity>
+    <entity name="ShoppingItemEntity" representedClassName="ShoppingItemEntity" syncable="YES">
+        <attribute name="checked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="itemCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="itemsToChoice" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="ChoicesEntity" inverseName="choiceToItem" inverseEntity="ChoicesEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ChoicesEntity" positionX="-2198" positionY="-4383" width="128" height="103"/>
+        <element name="ShoppingItemEntity" positionX="-2646" positionY="-4392" width="128" height="103"/>
+    </elements>
+</model>
